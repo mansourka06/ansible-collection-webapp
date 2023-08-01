@@ -1,0 +1,6 @@
+[submodule "roles/nginx"]
+	path = roles/nginx
+	url = https://github.com/mansourka06/ansible-role-nginx.git
+[submodule "roles/webapp"]
+	path = roles/webapp
+	url = https://github.com/mansourka06/ansible-role-webapp.git
