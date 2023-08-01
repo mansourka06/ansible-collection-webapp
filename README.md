@@ -77,5 +77,31 @@ git tag v1.0.0
 git push origin v1.0.0
 ```
 
+
+## Test ansible collection
+- Create collections test directory & requirements file:
+```bash
+mkdir collections
+vi collections/requirements.yml (copie your release artefact url in the file)
+
+```
+
+- Install the requirements by running :
+```bash
+ansible-galaxy install -r collections/requirements.yml
+```
+
+Result:
+```bash
+Downloading https://github.com/mansourka06/ansible-collection-webapp/releases/download/v1.0.0/mansourka06-webapp-1.0.0.tar.gz to /home/manska/.ansible/tmp/ansible-local-1627orb6wkvc/tmpahrj9u6v/mansourka06-webapp-1.0.0-l3n9b26u
+Starting galaxy collection install process
+Process install dependency map
+Starting collection install process
+Installing 'mansourka06.webapp:1.0.0' to '/home/manska/.ansible/collections/ansible_collections/mansourka06/webapp'
+mansourka06.webapp:1.0.0 was installed successfully
+```
+
+
+
 ## Author
 * [Mansour KA](http://mansourka.com)
