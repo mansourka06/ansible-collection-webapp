@@ -69,6 +69,13 @@ We can create a pipeline to build a release of our collection when a new tags is
 - Create the release pipeline in the path: .github/workflows
 - add the [content](.github/workflows/release.yml) pipeline to the file. (example: .github/workflows/release.yml)
 
+Then push the release version for build:
+```bash
+git add .
+git commit -m "message"
+git tag v1.0.0
+git push origin v1.0.0
+```
 
 ## Author
 * [Mansour KA](http://mansourka.com)
