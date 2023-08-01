@@ -28,17 +28,23 @@ jobs:
     - name: Create collection
       run: ansible-galaxy collection build
 
-    - name: Upload artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: ansible-collection-webapp
-        path: "*.tar.gz"
+    # - name: Upload artifact
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: ansible-collection-webapp
+    #     path: "*.tar.gz"
     
+    # - name: Create Release
+    #   id: create_release
+    #   uses: ncipollo/release-action@v1
+    #   with:
+    #     artifacts: "ansible-collection-webapp"
+    #     token: ${{ secrets.GITHUB_TOKEN }}
+
     - name: Create Release
-      id: create_release
       uses: ncipollo/release-action@v1
       with:
-        artifacts: "ansible-collection-webapp"
+        artifacts: "*.tar.gz"
         token: ${{ secrets.GITHUB_TOKEN }}
 
 ...
